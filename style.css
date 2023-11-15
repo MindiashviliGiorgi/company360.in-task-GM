@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+.containers-list {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  align-items: top;
+  background-color: #ecec00;
+  padding: 20px;
+}
+.container {
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  position: relative;
+}
+.title {
+  width: 100%;
+  text-align: center;
+}
+.title h1 {
+  font-size: 20px;
+}
+.price {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 5px;
+  background-color: #e8f9ff;
+}
+.price b {
+  font-size: 17px;
+}
+.price h3 {
+  font-size: 40px;
+}
+.price span {
+  font-size: 15px;
+  color: #0000be;
+}
+.information p {
+  font-size: 18px;
+}
+.more {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.more p {
+  color: #0000be;
+}

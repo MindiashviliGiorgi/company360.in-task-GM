@@ -4,17 +4,27 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+body {
+  background-color: #fbfbfb;
+}
 .main {
   width: 100%;
-  min-height: 100vh;
-  padding: 50px 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.containers-system {
+  width: 100%;
+  min-height: auto;
+  padding: 40px 100px 0px 100px;
   display: flex;
   align-items: top;
   justify-content: center;
 }
 .containers-list {
   width: 100%;
+  min-width: 340px;
   height: 600px;
   display: flex;
   flex-direction: row;
@@ -32,6 +42,20 @@
   flex-direction: column;
   row-gap: 20px;
   position: relative;
+  overflow: hidden;
+}
+.release {
+  width: 100px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecec00;
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -20px;
+  transform: rotate(-40deg);
 }
 .title {
   width: 100%;
@@ -51,7 +75,7 @@
   background-color: #e8f9ff;
 }
 .price b {
-  font-size: 17px;
+  font-size: 18px;
 }
 .price h3 {
   font-size: 40px;
@@ -61,7 +85,7 @@
   color: #0000be;
 }
 .information p {
-  font-size: 18px;
+  font-size: 16px;
 }
 .more {
   width: 100%;
@@ -75,4 +99,63 @@
 }
 .more p {
   color: #0000be;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  column-gap: 20px;
+}
+
+.pagination-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #979797;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #2a2a2a;
+}
+
+@media screen and (min-width : 1200px) {
+  .pagination {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .containers-system {
+    padding: 10px 10px 0px 10px;
+  }
+  .containers-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+    padding: 10px 50px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .pagination-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  .pagination-dot.active {
+    background-color: #333;
+  }
+}
+@media screen and (max-width : 430px) {
+  .container {
+    padding: 10px 20px;
+  }
 }
